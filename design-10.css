@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'popins',sans-serif;
+   
+}
+section{
+    position: relative;
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background: url(image/federico-respini-sYffw0LNr7s-unsplash.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+header{
+    position: relative;
+    top:0;
+    width:100%;
+    padding:30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    position: relative;
+    color:white;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    font-weight: 900;
+}
+.navigation{
+    display: inline-block;
+    padding:0 25px
+
+}
+.navigation a{
+    color:black;
+    font-size: 25px;
+    transition:0.3s;
+    padding:0 25px
+    
+}
+.navigation a:hover{
+    color:white;
+    
+}
+.content{
+    max-width:650px;
+    margin:60px 100px;
+}
+.info h2{
+    font-size: 50px;
+    text-transform: uppercase;
+    color:#02d5dcf8;
+}
+.info span{
+    font-size: 40px;
+    color:aliceblue;
+    line-height:1.5;
+
+}
+.info p{
+    font-size: 25px;
+    padding:20px 0;
+    font-weight: 300;
+}
+.info-btn{
+    background-color:teal;
+    color:#fff;
+    padding:10px 20px;          
+    font-size: 20px;
+    border-radius: 5px;
+   
+    
+   
+    /* background: teal; */
+}
+.info-btn:hover{
+    background:rgb(66, 87, 87);
+    
+}
+.media-icons{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:200px;
+    transition:0.4s;
+    transition-property:transform ;
+
+}
+.media-icons i{
+    font-size: 40px;
+    padding:0 30px;
+    /* color:gainsboro;  */
+}
+.media-icons a:hover{
+    transform: scale(1.5);
+}
+.facebook{
+    color:white;
+   
+}
+.instagram{
+    color:crimson;
+}
+.facebook:hover{
+  
+    color:blue;
+}
+.instagram:hover{
+    color:aqua;
+
+}
+.twitter:hover{
+    color:darkcyan;
+}
+
+
+label{
+    display: none;
+}
+#check{
+    z-index: 3;
+    display: none;
+}
+/* responsive style */
+@media screen and (max-width:960px){
+    header .navigation{
+        display: none;
+    }
+    label{
+        display: block;
+        font-size: 35px;
+        cursor:pointer;
+        transition:0.3s;
+        transition-property: color;
+    }
+    label:hover{
+        color:#fff;
+    }
+    label .close-btn{
+        display: none;
+    }
+    #check:checked ~ header .navigation{
+        z-index: 2;
+        position: fixed;
+        background: rgba(114,223,255, 0.8);
+        top:0;
+        bottom:0;
+        left:0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #check:checked ~ header .navigation a{
+        font-weight: 700;
+        margin-right: 0;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
+    #check:checked ~ header label .menu-btn{
+        display: none;
+
+    }
+    #check:checked ~ header label .close-btn{
+        z-index: 2;
+        display: block;
+        position: fixed;
+    }
+    label .menu-btn{
+        position: absolute;
+
+    }
+    header .logo{
+        position: absolute;
+        bottom:-6px;
+    }
+    .content .info h2{
+        font-size: 45px;
+        font-weight: 600;
+    }
+    .content .info p{
+        font-size: 14px;
+    }
+    .info-btn{
+        position: absolute;
+        top:450px;
+    }
+    .media-icons{
+        position: absolute;
+        bottom:-250px;
+        left:100px;
+    }
+}
+@media screen and (max-width:560px){
+    .content .info h2{
+        font-size: 35px;
+        font-weight: 400;
+    }
+    .content .info p{
+        font-size: 12px;
+    }
+    .info-btn{
+        position: absolute;
+        top:450px;
+        left:200px;
+    }
+    section{
+        overflow: hidden;
+    }
+
+}
